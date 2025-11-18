@@ -31,7 +31,7 @@
 
 * **`MAC_TOP` (Controller):** 최상위 모듈로, FSM을 포함하며 외부 메모리(SRAM)와의 인터페이스 및 전체 데이터 패스 제어를 담당합니다.
 
-![Top Module Interface](doc/images/TOP_MODULE_INTERFACE.jpeg)
+![Top Module Interface](doc/images/TOP_MODULE_INTERFACE.jpg)
 
 * **`MAC_4X4_ARRAY` (Core):** 4개의 Column 모듈로 구성된 연산 어레이입니다. Systolic 동작을 위한 **Input Skewing (입력 지연)** 및 **Output De-skewing (출력 정렬)** 로직이 포함되어 있습니다.
 * **`MAC_4X1_COL` (Column):** 4개의 PE가 수직으로 연결된 구조입니다. 입력 데이터(i)와 가중치(w)가 위에서 아래로 전파됩니다.
@@ -52,7 +52,7 @@
 * **`IDLE`**: `START` 신호 대기 및 내부 카운터 리셋.
 * **`READY`**: 연산 시작 전 주소 및 카운터 초기화 (Setup).
 * **`LOAD_W`**: SRAM에서 가중치를 읽어와 PE Array에 로드.
-* **`LOAD_I` & `STORE_O`**: 입력 데이터를 주입하고 연산 결과를 출력. 행렬 크기가 4x4를 초과할 경우, FSM이 이를 감지하여 **Folding (반복 연산)**을 수행.
+* **`LOAD_I` & `STORE_O`**: 입력 데이터를 주입하고 연산 결과를 출력. 행렬 크기가 4x4를 초과할 경우, FSM이 이를 감지하여 **Folding (반복 연산)** 을 수행.
 * **`STOP`**: 모든 연산 완료 시 1-cycle `DONE` 펄스를 출력하고 `IDLE`로 복귀.
 
 ---

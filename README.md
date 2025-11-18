@@ -93,7 +93,7 @@
 ### 2. Automated Testbench (`TB_MAC_TOP.v`)
 * **Auto-Traversal:** 8가지의 다양한 Matrix Folding 시나리오와 경계값(Min/Max) 케이스를 자동으로 순회합니다.
 * **Handshake Protocol:** DUT의 `DONE` 신호를 감지하여 다음 케이스로 진행합니다.
-* **Between-Case Reset:** 각 테스트 케이스 시작 전, 출력 메모리를 `x`로 강제 초기화하여 **이전 케이스의 잔여 데이터(Garbage Data)**로 인한 False Pass를 원천 차단했습니다.
+* **Between-Case Reset:** 각 테스트 케이스 시작 전, 출력 메모리를 `x`로 강제 초기화하여 **이전 케이스의 잔여 데이터(Garbage Data)** 로 인한 False Pass를 원천 차단했습니다.
 
 ---
 

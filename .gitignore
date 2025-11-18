@@ -1,0 +1,4 @@
+*.vcd
+*.vvp
+*.bak
+modelsim_script.sh
